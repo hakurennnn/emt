@@ -1,1 +1,6 @@
 libgl1
+streamlit==0.89.0
+numpy~=1.19.2
+Pillow==8.2.0
+tensorflow==2.6.0
+tensorflow-addons==0.14.0
