@@ -6,7 +6,8 @@ from tensorflow.keras.models import load_model
 
 @st.cache(allow_output_mutation=True)
 def load_weather_model():
-    model = load_model('modelsaved.h5')
+    custom_objects = {'<your_optimizer_name>': tf.keras.optimizers.Adam}  # Replace <your_optimizer_name> with the name of your custom optimizer
+    model = load_model('modelsaved.h5', custom_objects=custom_objects)
     return model
 
 def preprocess_image(image):
